@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Plumbing and Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Absolute Plumbing and Projects - Professional plumbing services for homes and businesses in Delmore Park and surrounding areas.">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Absolute Plumbing and Projects</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Reliable. Professional. Affordable.</h2>
+            <p>Your trusted partner for all plumbing needs in Delmore Park and beyond.</p>
+            <a href="#" class="cta-btn" id="quoteBtn">Get a Free Quote</a>
+        </div>
+    </section>
+    <div id="quoteModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+        <div style="background:#fff; padding:2rem; border-radius:12px; max-width:400px; width:90%; position:relative;">
+            <span id="closeModal" style="position:absolute; top:10px; right:18px; font-size:1.5rem; cursor:pointer;">&times;</span>
+            <h2 style="text-align:center; color:#0074D9;">Request a Free Quote</h2>
+            <form action="submit_form.php" method="post" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Describe your plumbing needs" required></textarea>
+                <button type="submit">Send Quote Request</button>
+            </form>
+        </div>
+    </div>
+    <section id="services" class="section services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Residential Plumbing</li>
+                <li>Commercial Plumbing</li>
+                <li>Emergency Plumbing Services</li>
+                <li>Leak Detection & Repair</li>
+                <li>Drain Cleaning</li>
+                <li>Water Heater Installation & Repair</li>
+            </ul>
+        </div>
+    </section>
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Absolute Plumbing and Projects is a Level 1 B-BBEE Contributor, committed to providing top-quality plumbing solutions. Our team is highly skilled, experienced, and dedicated to customer satisfaction. We use only the best products and offer competitive pricing for all our services.</p>
+        </div>
+    </section>
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-images">
+                <img src="images/pipeline-7476508_1280.jpg" alt="Pipeline work">
+                <img src="images/plumbing Image 2025-05-27 at 11.06.05_533bf1b0.jpg" alt="Plumbing team">
+                <img src="images/plumbing-2489860_1280.jpg" alt="Plumbing tools">
+                <img src="images/geyser.jpg" alt="Geyser installation">
+                <img src="images/geyser3.jpg" alt="Geyser tools">
+                <img src="images/maintainance3.jpg" alt="Maintenance work" width="400 height="300">
+                <img src="images/maintainance2.jpg" alt="Maintenance team">
+                <img src="images/maintainance.jpg" alt="Maintenance tools">
+                <img src="images/meter.jpg" alt="Plumbing project">
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p><strong>Director:</strong> Madoda Magaga</p>
+            <p><strong>Phone:</strong> <a href="tel:+27836603477">+27 83 660 3477</a></p>
+            <p><strong>Email:</strong> <a href="https://www.absoluteplumbingandprojects.co.za">absoluteplumbingandprojects.co.za</a></p>
+            <p><strong>Address:</strong> 13 Kearsney Avenue, Delmore Park, 1459</p>
+            <form action="submit_form.php" method="post" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Absolute Plumbing and Projects. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/absoluteplumbingprojects" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/absoluteplumbingprojects" target="_blank">Instagram</a></li>
+                <li><a href="https://www.twitter.com/absoluteplumbingprojects" target="_blank">Twitter</a></li>
+            </ul>
+            <form class="newsletter-form">
+                <label for="newsletter-email">Subscribe to our newsletter:</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('quoteBtn').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('quoteModal').style.display = 'flex';
+        };
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('quoteModal').style.display = 'none';
+        };
+        window.onclick = function(event) {
+            var modal = document.getElementById('quoteModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
